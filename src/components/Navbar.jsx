@@ -46,7 +46,7 @@ export default function Navbar() {
   const handleNavClick = () => setMenuOpen(false);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] md:w-[80%] bg-dark/70 backdrop-blur-lg border border-royalblue rounded-full shadow-xl z-50">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] md:w-[80%] bg-dark/70 backdrop-blur-lg border border-royalblue rounded-full shadow-xl z-50 overflow-x-hidden">
       <div className="flex justify-between items-center px-4 md:px-6 py-3">
         {/* Logo with neon hover */}
         <a href="#home" className="flex items-center group">

@@ -9,6 +9,10 @@
 
 
 
+body{
+  overflow-x: hidden;
+}
+
 
 
 @keyframes float {

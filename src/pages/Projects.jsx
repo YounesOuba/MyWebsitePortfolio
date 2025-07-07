@@ -37,8 +37,6 @@ import project3k from "../assets/projects/project3/project3k.png";
 import project4a from "../assets/projects/project4/project4a.png";
 import project4b from "../assets/projects/project4/project4b.png";
 
-import project3 from "../assets/projects/Project3.jpg";
-
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);
   const [currentImages, setCurrentImages] = useState([]);

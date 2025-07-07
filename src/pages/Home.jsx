@@ -22,17 +22,16 @@ export default function Home() {
       <SquaresBG />
 
       {/* Main Content */}
-      <div className="w-[95vw] max-w-7xl mx-auto h-full flex flex-col md:flex-row justify-center items-center text-center md:text-left z-10 relative font-body px-2 md:px-4 mt-10 md:mt-20">
-        
+      <div className="w-full max-w-7xl mx-auto h-full overflow-x-hidden flex flex-col md:flex-row justify-center items-center text-center md:text-left z-10 relative font-body px-2 md:px-4 mt-10 md:mt-20 gap-8">
         {/* Hero Text */}
         <motion.div
-          className="flex flex-col items-center md:items-start md:w-1/2 ml-0 md:ml-12"
+          className="flex flex-col items-center md:items-start w-full md:w-1/2 ml-0 md:ml-12"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
           <motion.h1
-            className="text-5xl sm:text-5xl md:text-6xl font-heading font-bold text-royalblue mb-4 ml-14"
+            className="text-4xl sm:text-5xl md:text-7xl font-heading font-bold text-royalblue mb-4 ml-0 md:ml-14 leading-tight text-center md:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
@@ -41,7 +40,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className="text-base sm:text-lg md:text-2xl text-white max-w-xl font-bold mb-8 md:text-left ml-14"
+            className="text-base sm:text-xl md:text-2xl text-white max-w-xl font-bold mb-8 text-center md:text-left ml-0 md:ml-14"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
@@ -72,7 +71,7 @@ export default function Home() {
           <img
             src={MyPic}
             alt="That's me!"
-            className="w-72 ml-0 md:ml-16 object-cover rounded-full shadow-lg hover:scale-105 transition"
+            className="w-72 ml-10 md:ml-16 object-cover rounded-full shadow-lg hover:scale-105 transition"
           />
         </motion.div>
       </div>

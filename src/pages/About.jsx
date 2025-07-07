@@ -83,7 +83,7 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
       >
-        <h3 className="text-3xl font-bold mb-4 flex items-center justify-center gap-2 uppercase">
+        <h3 className="text-3xl font-bold mb-4 flex items-center flex-nowrap gap-2 justify-center uppercase">
           <FaGraduationCap className="text-white" /> OFPPT Diploma
         </h3>
         <p className="max-w-3xl mx-auto text-lg leading-relaxed">
