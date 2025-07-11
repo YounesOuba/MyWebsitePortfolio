@@ -82,12 +82,16 @@ export default function Home() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-20 z-0"></div>
 
       {/* Scroll Down Arrow */}
-      <button
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10 cursor-pointer bg-royalblue/20 p-3 rounded-full border border-royalblue hover:bg-royalblue/40 transition"
-      >
-        <ChevronDown className="text-royalblue w-6 h-6" />
-      </button>
+      <div className="absolute bottom-6 w-full flex justify-center z-10">
+        <button
+          onClick={scrollToAbout}
+          className="animate-bounce cursor-pointer bg-royalblue/20 p-3 rounded-full border border-royalblue hover:bg-royalblue/40 transition"
+        >
+          <ChevronDown className="text-royalblue w-6 h-6" />
+        </button>
+      </div>
+
+
     </div>
   );
 }

@@ -57,7 +57,7 @@ export default function SquaresBG() {
         {Array.from({ length: cols * rows }).map((_, i) => (
           <div
             key={i}
-            className="border border-blue-500 transition-all pointer-events-auto opacity-10"
+            className="border border-blue-500 transition-all pointer-events-auto opacity-20"
             style={{
               backgroundColor: hoverIndex === i ? "rgba(65, 105, 225, 0.5)" : "transparent",
               width: `${squareSize}px`,

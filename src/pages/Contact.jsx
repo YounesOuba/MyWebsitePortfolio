@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
-import { useForm } from "@formspree/react";
+import { useForm, ValidationError } from "@formspree/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Contact() {
-  const [state, handleSubmit] = useForm("xqabjaqp");
+
+export default function Contact() { 
+  const [state, handleSubmit] = useForm("xqabjaqp"); 
 
   useEffect(() => {
     AOS.init({
@@ -101,12 +102,7 @@ export default function Contact() {
         {/* Contact Form */}
         <div className="w-full lg:w-2/3" data-aos="fade-left">
           <h3 className="text-3xl font-bold mb-4">Send Me a Message</h3>
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-5"
-            action="https://formspree.io/f/mrbekgyq"
-            method="POST"
-          >
+          <form onSubmit={handleSubmit} className="flex flex-col gap-5">
             <input
               type="text"
               name="Name"
@@ -114,6 +110,7 @@ export default function Contact() {
               required
               className="bg-[#111827] p-4 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-royalblue"
             />
+            <ValidationError prefix="Name" field="Name" errors={state.errors} />
             <input
               type="email"
               name="Email"
@@ -121,19 +118,21 @@ export default function Contact() {
               required
               className="bg-[#111827] p-4 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-royalblue"
             />
+            <ValidationError prefix="Email" field="Email" errors={state.errors} />
             <textarea
-              name="Message"
+              name="message"
               placeholder="Your Message"
               rows="4"
               required
               className="bg-[#111827] p-4 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-royalblue"
             ></textarea>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
             <button
               type="submit"
               disabled={state.submitting}
               className="bg-gradient-to-r from-royalblue to-purple-500 hover:scale-105 transition text-white font-bold py-3 rounded-lg mt-2"
             >
-              {state.submitting ? "Sending..." : "Send Message"}
+              Send Message
             </button>
           </form>
         </div>

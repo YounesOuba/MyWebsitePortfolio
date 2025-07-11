@@ -1,7 +1,10 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { motion } from "framer-motion";
-import cvFile from "../assets/mycv.pdf";
+
+import EngCV from "../assets/Eng-CV-Younes.pdf";
+import FrCV from "../assets/FR-CV-Younes.pdf";
+
 import htmlIcon from "../assets/icons/html.png";
 import cssIcon from "../assets/icons/css.png";
 import jsIcon from "../assets/icons/javascript.png";
@@ -17,6 +20,13 @@ import gitIcon from "../assets/icons/git.png";
 import vscodeIcon from "../assets/icons/vscode.png";
 import xamppIcon from "../assets/icons/xampp.png";
 import mysqlworkbenchIcon from "../assets/icons/mysqlworkbench.png";
+import nodeIcon from "../assets/icons/nodeIcon.png";
+import postgreIcon from "../assets/icons/postgreIcon.png";
+import LaravelIcon from "../assets/icons/LaravelIcon.png";
+import expressIcon from "../assets/icons/expressIcon.png";
+import postmanIcon from "../assets/icons/postmanIcon.png";
+
+
 import { FaGraduationCap, FaCode, FaLanguage } from "react-icons/fa";
 
 import { useEffect } from 'react';
@@ -32,23 +42,38 @@ export default function Resume() {
     { school: "Abdelmoumn High School, Tounfite", degree: "Bachelor's - Physics & Chemistry", year: "Graduated: 2023" },
   ];
 
-  const skills = [
-    { name: "HTML", icon: htmlIcon, url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
-    { name: "CSS", icon: cssIcon, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
-    { name: "JavaScript", icon: jsIcon, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-    { name: "React", icon: reactIcon, url: "https://react.dev/" },
-    { name: "Tailwind CSS", icon: tailwindIcon, url: "https://tailwindcss.com/" },
-    { name: "Bootstrap", icon: bootstrapIcon, url: "https://getbootstrap.com/" },
-    { name: "PHP", icon: phpIcon, url: "https://www.php.net/" },
-    { name: "MySQL", icon: mySqlIcon, url: "https://www.mysql.com/" },
-    { name: "MongoDB", icon: mongoIcon, url: "https://www.mongodb.com/" },
-    { name: "Python", icon: pythonIcon, url: "https://www.python.org/" },
-    { name: "Git", icon: gitIcon, url: "https://git-scm.com/" },
-    { name: "GitHub", icon: githubIcon, url: "https://github.com/" },
-    { name: "VS Code", icon: vscodeIcon, url: "https://code.visualstudio.com/" },
-    { name: "XAMPP", icon: xamppIcon, url: "https://www.apachefriends.org/index.html" },
-    { name: "MySQL Workbench", icon: mysqlworkbenchIcon, url: "https://www.mysql.com/products/workbench/" },
-  ];
+const skills = [
+  // 🌐 Frontend
+  { name: "HTML", icon: htmlIcon, url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  { name: "CSS", icon: cssIcon, url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  { name: "JavaScript", icon: jsIcon, url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  { name: "React", icon: reactIcon, url: "https://react.dev/" },
+  { name: "Tailwind CSS", icon: tailwindIcon, url: "https://tailwindcss.com/" },
+  { name: "Bootstrap", icon: bootstrapIcon, url: "https://getbootstrap.com/" },
+
+  // ⚙️ Backend
+  { name: "Node.js", icon: nodeIcon, url: "https://nodejs.org/" },
+  { name: "Express.js", icon: expressIcon, url: "https://expressjs.com/" },
+  { name: "PHP", icon: phpIcon, url: "https://www.php.net/" },
+  { name: "Laravel", icon: LaravelIcon, url: "https://laravel.com/" },
+  { name: "Python", icon: pythonIcon, url: "https://www.python.org/" },
+
+  // 📡 APIs
+  { name: "Postman", icon: postmanIcon, url: "https://www.postman.com/" },
+
+  // 🗃️ Databases
+  { name: "MySQL", icon: mySqlIcon, url: "https://www.mysql.com/" },
+  { name: "PostgreSQL", icon: postgreIcon, url: "https://www.postgresql.org/" },
+  { name: "MongoDB", icon: mongoIcon, url: "https://www.mongodb.com/" },
+
+  // 🛠️ Tools & Platforms
+  { name: "Git", icon: gitIcon, url: "https://git-scm.com/" },
+  { name: "GitHub", icon: githubIcon, url: "https://github.com/" },
+  { name: "VS Code", icon: vscodeIcon, url: "https://code.visualstudio.com/" },
+  { name: "XAMPP", icon: xamppIcon, url: "https://www.apachefriends.org/index.html" },
+  { name: "MySQL Workbench", icon: mysqlworkbenchIcon, url: "https://www.mysql.com/products/workbench/" },
+];
+
 
   const devSkills = ["HTML, CSS, JavaScript", "Bootstrap", "Tailwind CSS", "jQuery, Ajax", "React, Node.js", "UI/UX Design", "PHP, MySQL", "MongoDB, JSON", "Python", "Git & GitHub", "RESTful APIs", "Responsive Design", "Figma, Wireframing", "Version Control (Git)", "Linux", "XAMPP, MySQL Workbench", "Problem Solving", "Express.js", "Laravel", "Debugging & Testing", "VS Code Tools"];
   const languages = ["Arabic - Native", "Tamazight - Native", "English - Advanced", "French - Advanced", "German - Intermediate"];
@@ -156,11 +181,18 @@ export default function Resume() {
   <div className="md:w-1/4 w-full flex flex-col justify-center items-center bg-[#111827] border border-royalblue rounded-3xl p-8 shadow-xl hover:scale-105 transition">
     <h3 className="text-2xl font-bold text-royalblue mb-6 text-center">Download My CV</h3>
     <a
-      href={cvFile}
+      href={EngCV}
       target='_blank'
       className="flex items-center gap-3 bg-royalblue hover:bg-purple-500 text-white font-bold px-8 py-3 rounded-full shadow-lg transition"
     >
-      <FaDownload /> Download CV
+      <FaDownload /> CV - English
+    </a>
+    <a
+      href={FrCV}
+      target='_blank'
+      className="flex items-center mt-4 gap-3 bg-royalblue hover:bg-purple-500 text-white font-bold px-8 py-3 rounded-full shadow-lg transition"
+    >
+      <FaDownload /> CV - Français
     </a>
   </div>
 
