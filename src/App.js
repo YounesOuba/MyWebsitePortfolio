@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
+import ContactForm from "./pages/Contact";
 
 import { useEffect } from 'react';
 import AOS from "aos";
@@ -35,7 +35,7 @@ export default function App() {
           <Projects />
         </section>
         <section id="contact">
-          <Contact />
+          <ContactForm />
         </section>
 
         <Footer />
