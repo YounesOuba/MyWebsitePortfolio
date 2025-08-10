@@ -75,7 +75,7 @@ const skills = [
 ];
 
 
-  const devSkills = ["HTML, CSS, JavaScript", "Bootstrap", "Tailwind CSS", "jQuery, Ajax", "React, Node.js", "UI/UX Design", "PHP, MySQL", "MongoDB, JSON", "Python", "Git & GitHub", "RESTful APIs", "Responsive Design", "Figma, Wireframing", "Version Control (Git)", "Linux", "XAMPP, MySQL Workbench", "Problem Solving", "Express.js", "Laravel", "Debugging & Testing", "VS Code Tools"];
+  const devSkills = ["HTML, CSS, JavaScript", "Bootstrap", "Tailwind CSS", "React, Node.js", "UI/UX Design", "PHP, MySQL", "MongoDB, JSON", "Python", "Git & GitHub", "RESTful APIs", "Responsive Design", "Figma, Wireframing", "Version Control (Git)", "Linux", "XAMPP, MySQL Workbench", "Problem Solving", "Express.js", "Laravel", "Debugging & Testing", "VS Code Tools"];
   const languages = ["Arabic - Native", "Tamazight - Native", "English - Advanced", "French - Advanced", "German - Intermediate"];
   const softSkills = ["Problem Solving", "Project Management", "Organization", "Teamwork and Collaboration", "Data Analysis", "Creativity and Innovation", "Communication", "Time Management", "Adaptability", "Attention to Detail", "Critical Thinking", "Leadership"];
 

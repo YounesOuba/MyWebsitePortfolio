@@ -9,6 +9,8 @@ import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
 import ContactForm from "./pages/Contact";
 
+import { Analytics } from '@vercel/analytics/react';
+
 import { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,6 +22,7 @@ export default function App() {
 
   return (
     <>
+      <Analytics />
       <Navbar />
       <main>
         <section id="home">
