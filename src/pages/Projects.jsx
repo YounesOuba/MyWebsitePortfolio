@@ -37,6 +37,10 @@ import project3k from "../assets/projects/project3/project3k.png";
 import project4a from "../assets/projects/project4/project4a.png";
 import project4b from "../assets/projects/project4/project4b.png";
 
+import spoty1 from "../assets/projects/spotyflex/1.png";
+import spoty2 from "../assets/projects/spotyflex/2.png";
+import spoty3 from "../assets/projects/spotyflex/3.png";
+import spoty4 from "../assets/projects/spotyflex/4.png";
 
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);
@@ -77,6 +81,14 @@ export default function Projects() {
       github: "https://github.com/YounesOuba/gbtombconverter",
       tags: ["HTML", "CSS", "JavaScript", "UI/UX"],
     },
+    {
+      title: "SpotyFlex",
+      images: [spoty1, spoty2, spoty3, spoty4],
+      description: "Spotyflex is a blog of fitness & wellness articles, with a modern and responsive design.",
+      demo: "https://spotyflex.com/",
+      github: "https://github.com/YounesOuba/spotyflex",
+      tags: ["Vite Js", "React", "React Router", "Tailwind CSS", "Toastify"],
+    }
   ];
 
   const openModal = (images, project) => {
@@ -95,21 +107,21 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen px-4 sm:px-8 py-20 bg-[#0f172a] text-white flex flex-col items-center gap-16">
+  <section id="projects" className="min-h-screen px-4 sm:px-8 py-20 bg-gradient-to-b from-[#070A10] to-[#00020694] text-white flex flex-col items-center gap-16 relative overflow-hidden">
 
       {/* Title with Animated Lines */}
       <div className="w-full flex items-center justify-center gap-4" data-aos="fade-up">
         <div className="hidden md:block flex-grow h-0.5 bg-gradient-to-r from-transparent via-royalblue to-transparent animate-pulse blur-sm"></div>
-        <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-royalblue to-purple-500 text-center glitch">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4169E1] to-[#5ea1ff] text-center uppercase tracking-widest">
           My Projects
         </h2>
-        <div className="hidden md:block flex-grow h-0.5 bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-pulse blur-sm"></div>
+        <div className="hidden md:block flex-grow h-0.5 bg-gradient-to-r from-transparent via-royalblue to-transparent animate-pulse blur-sm"></div>
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+  <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 z-10">
         {projects.map((project, index) => (
-          <div key={index} className="group bg-[#111827] rounded-3xl border border-royalblue p-4 flex flex-col shadow-xl hover:shadow-[0_0_25px_#4169E1] transition" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div key={index} className="group bg-gradient-to-br from-blue-950 via-blue-950 to-transparent rounded-3xl border border-royalblue p-4 flex flex-col shadow-xl hover:shadow-[0_0_30px_rgba(65,105,225,0.35)] transition transform-gpu" data-aos="fade-up" data-aos-delay={index * 100}>
             
             {/* Image with Hover */}
             <div className="relative overflow-hidden rounded-xl mb-4 cursor-pointer" onClick={() => openModal(project.images, project)}>
@@ -117,18 +129,18 @@ export default function Projects() {
               {project.images.length > 1 && (
                 <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
                   {project.images.map((_, i) => (
-                    <span key={i} className="w-2 h-2 rounded-full bg-white opacity-50 group-hover:opacity-100"></span>
+                    <span key={i} className="w-2 h-2 rounded-full bg-royalblue/70 opacity-70 group-hover:opacity-100 shadow-sm"></span>
                   ))}
                 </div>
               )}
             </div>
 
             {/* Info */}
-            <h3 className="text-xl font-bold text-royalblue mb-2">{project.title}</h3>
-            <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+            <h3 className="text-xl font-bold text-blue-100 mb-2">{project.title}</h3>
+            <p className="text-gray-200 text-sm mb-4">{project.description}</p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tags.map((tag, i) => (
-                <span key={i} className="px-3 py-1 bg-slate-800/60 border border-purple-500 rounded-full text-xs text-gray-200 hover:bg-purple-500/20 transition">
+                <span key={i} className="px-3 py-1 bg-royalblue/10 border border-royalblue rounded-full text-xs text-white hover:bg-royalblue/20 transition">
                   {tag}
                 </span>
               ))}
@@ -136,7 +148,7 @@ export default function Projects() {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-auto">
-              <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-gradient-to-r from-royalblue to-purple-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:scale-110 transition">
+              <a href={project.demo} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-gradient-to-r from-royalblue to-royalblue/60 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg hover:scale-110 transition">
                 <FaExternalLinkAlt /> Live Demo
               </a>
               <a href={project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 border border-royalblue text-royalblue text-sm font-bold px-4 py-2 rounded-full hover:bg-royalblue hover:text-white hover:scale-110 transition">
@@ -149,18 +161,18 @@ export default function Projects() {
 
       {/* Modal with Side Arrows */}
       {showModal && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-blue-950 flex items-center justify-center z-50">
           <div className="relative w-full max-w-2xl bg-[#111827] rounded-3xl p-6 flex flex-col items-center gap-6">
             
             {/* Image with Side Arrows */}
             <div className="relative w-full flex items-center justify-center">
-              <img src={currentImages[activeIndex]} alt="Project Preview" className="h-72 object-contain rounded-xl mx-auto" />
+                  <img src={currentImages[activeIndex]} alt="Project Preview" className="h-72 object-contain rounded-xl mx-auto" />
               {currentImages.length > 1 && (
                 <>
-                  <button onClick={prevImage} className="absolute left-2 bg-royalblue text-white p-2 rounded-full hover:bg-purple-500 transition">
+                      <button onClick={prevImage} className="absolute left-2 bg-royalblue text-white p-2 rounded-full hover:bg-royalblue/80 transition">
                     <FaArrowLeft />
                   </button>
-                  <button onClick={nextImage} className="absolute right-2 bg-royalblue text-white p-2 rounded-full hover:bg-purple-500 transition">
+                      <button onClick={nextImage} className="absolute right-2 bg-royalblue text-white p-2 rounded-full hover:bg-royalblue/80 transition">
                     <FaArrowRight />
                   </button>
                 </>
@@ -169,10 +181,10 @@ export default function Projects() {
 
             {/* Project Info */}
             <h3 className="text-2xl font-bold text-royalblue">{modalProject.title}</h3>
-            <p className="text-gray-300 text-sm text-center">{modalProject.description}</p>
+            <p className="text-gray-200 text-sm text-center">{modalProject.description}</p>
 
             <div className="flex justify-center gap-4 mt-4">
-              <a href={modalProject.demo} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-royalblue to-purple-500 text-white px-6 py-2 rounded-full shadow-lg hover:scale-110 transition">
+              <a href={modalProject.demo} target="_blank" rel="noreferrer" className="bg-gradient-to-r from-royalblue to-royalblue/60 text-white px-6 py-2 rounded-full shadow-lg hover:scale-110 transition">
                 Live Demo
               </a>
               <a href={modalProject.github} target="_blank" rel="noreferrer" className="border border-royalblue text-royalblue px-6 py-2 rounded-full hover:bg-royalblue hover:text-white transition">

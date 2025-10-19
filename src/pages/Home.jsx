@@ -77,19 +77,21 @@ export default function Home() {
       </div>
 
       {/* Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 z-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-30 z-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-20 z-0"></div>
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 z-0"></div>
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-800 opacity-30 z-0"></div>
+    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-20 z-0"></div>
 
-      {/* Scroll Down Arrow */}
-      <div className="absolute bottom-6 w-full flex justify-center z-10">
-        <button
-          onClick={scrollToAbout}
-          className="animate-bounce cursor-pointer bg-royalblue/20 p-3 rounded-full border border-royalblue hover:bg-royalblue/40 transition"
-        >
-          <ChevronDown className="text-royalblue w-6 h-6" />
-        </button>
-      </div>
+    <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent via-[#111827c4] to-[#00020694] z-0"></div>
+  
+    <div className="absolute bottom-6 w-full flex justify-center z-10">
+      <button
+        onClick={scrollToAbout}
+        className="animate-bounce cursor-pointer bg-royalblue/20 p-3 rounded-full border border-royalblue hover:bg-royalblue/40 transition"
+      >
+        <ChevronDown className="text-royalblue w-6 h-6" />
+      </button>
+    </div>
+      
 
 
     </div>

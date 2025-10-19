@@ -18,6 +18,7 @@
     "framer-motion": "^11.18.2",
     "glare-torch-mode": "^1.0.4",
     "glare-typography": "^1.0.4",
+    "gsap": "^3.13.0",
     "howler": "^2.2.4",
     "lucide-react": "^0.475.0",
     "mapping-color-system": "^1.0.1",

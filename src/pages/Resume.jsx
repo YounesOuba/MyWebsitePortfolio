@@ -80,46 +80,45 @@ const skills = [
   const softSkills = ["Problem Solving", "Project Management", "Organization", "Teamwork and Collaboration", "Data Analysis", "Creativity and Innovation", "Communication", "Time Management", "Adaptability", "Attention to Detail", "Critical Thinking", "Leadership"];
 
   return (
-    <section id="resume" className="min-h-screen text-white px-4 sm:px-8 py-16 flex flex-col items-center gap-16">
+  <section id="resume" className="min-h-screen bg-[#00020694] text-white px-4 sm:px-8 py-16 flex flex-col items-center gap-16 relative overflow-hidden">
 
       {/* Title */}
       <div className="w-full flex items-center justify-center gap-4" data-aos="fade-up" data-aos-duration="1000">
         {/* Left Line */}
-        <div className="hidden md:block flex-grow h-0.5 bg-gradient-to-r from-transparent via-royalblue to-transparent animate-pulse blur-sm"></div>
+  <div className="hidden md:block flex-grow h-0.5 bg-gradient-to-r from-transparent via-[#4169E1] to-transparent blur-sm"></div>
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-royalblue to-purple-500 text-center glitch relative">
+  <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#4169E1] to-[#5ea1ff] text-center uppercase tracking-widest">
             My Resume 
         </h2>
         {/* Right Line */}
-        <div className="hidden md:block flex-grow h-0.5 bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-pulse blur-sm"></div>
+ <div className="hidden md:block flex-grow h-0.5 bg-gradient-to-r from-transparent via-[#4169E1] to-transparent blur-sm"></div>
     </div>
 
-
       {/* Responsive Grid */}
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
 
         {/* Education */}
-        <div className="bg-[#111827] rounded-3xl border border-royalblue shadow-xl p-6 group hover:scale-105 transition relative" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000">
-          <h3 className="flex items-center gap-3 text-xl font-bold mb-6 text-royalblue">
+  <div className="bg-royalblue/10 rounded-3xl border border-royalblue shadow-xl p-6 group hover:scale-105 transition relative" data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000">
+          <h3 className="flex items-center gap-3 text-base font-bold mb-6 text-royalblue">
             <FaGraduationCap /> Education
           </h3>
           {education.map((edu, i) => (
-            <div key={i} className="bg-slate-800/60 p-4 rounded-xl border border-royalblue mb-4 hover:bg-royalblue/20 transition">
-              <strong>{edu.school}</strong>
-              <p className="text-sm">{edu.degree}</p>
+            <div key={i} className="bg-royalblue/20 p-4 rounded-xl border border-royalblue mb-4 hover:bg-royalblue/30 transition">
+              <strong className="text-white">{edu.school}</strong>
+              <p className="text-sm text-gray-100">{edu.degree}</p>
               <p className="text-xs text-royalblue mt-1">{edu.year}</p>
             </div>
           ))}
         </div>
 
         {/* Skills */}
-        <div className="bg-[#111827] rounded-3xl border border-purple-500 shadow-xl p-6 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1100">
-          <h3 className="flex items-center gap-3 text-xl font-bold mb-6 text-purple-400">
+  <div className="bg-royalblue/10 rounded-3xl border border-royalblue shadow-xl p-6 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1100">
+          <h3 className="flex items-center gap-3 text-base font-bold mb-6 text-royalblue">
             <FaCode /> Skills
           </h3>
           <div className="flex flex-wrap gap-2">
             {devSkills.map((skill, i) => (
-              <span key={i} className="px-4 py-2 bg-slate-800/60 rounded-full border border-purple-500 text-xs hover:bg-purple-500/20 transition">
+              <span key={i} className="px-4 py-2 bg-royalblue/10 rounded-full border border-royalblue text-xs text-white hover:bg-royalblue/20 transition">
                 {skill}
               </span>
             ))}
@@ -127,13 +126,13 @@ const skills = [
         </div>
 
         {/* Languages */}
-        <div className="bg-[#111827] rounded-3xl border border-green-400 shadow-xl p-6 hover:scale-105 transition" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1200">
-          <h3 className="flex items-center gap-3 text-xl font-bold mb-6 text-green-400">
+  <div className="bg-royalblue/10 rounded-3xl border border-royalblue shadow-xl p-6 hover:scale-105 transition" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1200">
+          <h3 className="flex items-center gap-3 text-base font-bold mb-6 text-royalblue">
             <FaLanguage /> Languages
           </h3>
           <ul className="space-y-3">
             {languages.map((lang, i) => (
-              <li key={i} className="pl-4 border-l-4 border-green-400 bg-slate-800/60 p-3 rounded-lg hover:bg-green-400/10 transition">
+              <li key={i} className="pl-4 border-l-4 border-royalblue bg-royalblue/10 p-3 rounded-lg hover:bg-royalblue/20 transition text-white">
                 {lang}
               </li>
             ))}
@@ -149,14 +148,14 @@ const skills = [
             href={skill.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#111827] p-5 rounded-xl flex flex-col items-center border border-royalblue shadow-[0_0_15px_#4169E1] hover:scale-110 hover:shadow-[0_0_30px_#4169E1] transition focus:outline-none focus:ring-2 focus:ring-royalblue"
+            className="bg-royalblue/10 p-5 rounded-xl flex flex-col items-center border border-royalblue shadow-[0_0_15px_#4169E1] hover:scale-110 hover:shadow-[0_0_30px_#4169E1] transition focus:outline-none focus:ring-2 focus:ring-royalblue"
             title={`Go to ${skill.name} official website`}
             data-aos="flip-left"
             data-aos-delay={500 + index * 50}
             data-aos-duration="900"
           >
             <img src={skill.icon} alt={skill.name} className="w-12 h-12 mb-3" loading="eager" />
-            <p className="text-gray-300 text-sm">{skill.name}</p>
+            <p className="text-white text-sm">{skill.name}</p>
           </a>
         ))}
       </div>
@@ -166,7 +165,7 @@ const skills = [
 <div className="w-full max-w-7xl flex flex-col md:flex-row gap-8" data-aos="fade-up">
 
   {/* Soft Skills*/}
-  <div className="md:w-3/4 w-full bg-gradient-to-br from-royalblue to-purple-500 p-8 rounded-3xl shadow-xl">
+  <div className="md:w-3/4 w-full bg-royalblue p-8 rounded-3xl hover:scale-105 transition-all shadow-xl">
     <h3 className="text-xl font-bold mb-6 text-[#0f172a] text-center">Soft Skills</h3>
     <ul className="flex flex-wrap justify-center gap-3">
       {softSkills.map((skill, i) => (
@@ -178,19 +177,19 @@ const skills = [
   </div>
 
   {/* CV Download */}
-  <div className="md:w-1/4 w-full flex flex-col justify-center items-center bg-[#111827] border border-royalblue rounded-3xl p-8 shadow-xl hover:scale-105 transition">
-    <h3 className="text-2xl font-bold text-royalblue mb-6 text-center">Download My CV</h3>
+  <div className="md:w-1/4 w-full flex flex-col justify-center items-center bg-royalblue/10 border border-royalblue rounded-3xl p-8 shadow-xl hover:scale-105 transition">
+    <h3 className="text-xl font-bold text-royalblue mb-6 text-center">Download My CV</h3>
     <a
       href={EngCV}
       target='_blank'
-      className="flex items-center gap-3 bg-royalblue hover:bg-purple-500 text-white font-bold px-8 py-3 rounded-full shadow-lg transition"
+      className="flex items-center gap-3 bg-royalblue hover:bg-blue-900 text-white font-bold px-8 py-3 rounded-full shadow-lg transition"
     >
       <FaDownload /> CV - English
     </a>
     <a
       href={FrCV}
       target='_blank'
-      className="flex items-center mt-4 gap-3 bg-royalblue hover:bg-purple-500 text-white font-bold px-8 py-3 rounded-full shadow-lg transition"
+      className="flex items-center mt-4 gap-3 bg-royalblue hover:bg-blue-900 text-white font-bold px-8 py-3 rounded-full shadow-lg transition"
     >
       <FaDownload /> CV - Français
     </a>
@@ -205,7 +204,7 @@ const skills = [
     href="https://github.com/YounesOuba"
     target="_blank"
     rel="noopener noreferrer"
-    className="contact-icon"
+    className="contact-icon text-white"
   >
     <FaGithub />
   </a>
@@ -214,14 +213,14 @@ const skills = [
     href="https://www.linkedin.com/in/younes-ouba-4560292a9"
     target="_blank"
     rel="noopener noreferrer"
-    className="contact-icon"
+    className="contact-icon text-white"
   >
     <FaLinkedin />
   </a>
   
   <a
     href="mailto:oubayounesouba@gmail.com"
-    className="contact-icon"
+    className="contact-icon text-white"
   >
     <FaEnvelope />
   </a>
